@@ -1,0 +1,39 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.selected{
+    -fx-border-width: 4;
+    -fx-border-color:   #15748e;
+    -fx-text-fill:white;
+    -fx-font-weight: bold;
+}
+.sideBar-label{
+    -fx-text-fill:white;
+}
+.invalid{
+    -fx-border-color:  #860d0d;
+    -fx-border-width: 2px;
+}
+
+.valid {
+    -fx-border-color: green;
+    -fx-border-width: 2px;
+}
+.box{
+    -fx-padding: 10px;
+    -fx-spacing: 5px;
+    -fx-border-color:  #860d0d;
+    -fx-border-width: 8px;
+    -fx-margin: 10px;
+    -fx-alignment: center; 
+    -fx-pref-width: 300px;
+}
+.pendingBtn{
+   -fx-background-color: #860d0d;
+   -fx-text-fill:white;
+    -fx-font-weight: bold;
+}

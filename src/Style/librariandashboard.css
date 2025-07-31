@@ -1,0 +1,49 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.selected{
+    -fx-border-width: 4;
+    -fx-border-color: red;
+    -fx-text-fill:white;
+    -fx-font-weight: bold;
+}
+.sideBar-label{
+    -fx-text-fill:white;
+}
+.PendingLabel{
+    -fx-background-color:  #1d7899;
+    -fx-text-fill: white;
+    -fx-pref-height: 40;
+    -fx-pref-width: 125;
+}
+.ApprovedLabel{
+    -fx-background-color:  #0c7638;
+    -fx-text-fill: white;
+    -fx-pref-height: 40;
+    -fx-pref-width: 125;
+}
+.approveBtn{
+    -fx-background-color: #0c7638; 
+    -fx-text-fill: white; 
+    -fx-padding: 5;
+    -fx-pref-height: 40;
+    -fx-pref-width:100;
+}
+.rejectBtn{
+    -fx-background-color:  #860d0d ;
+    -fx-text-fill: white;
+    -fx-padding: 5;
+    -fx-pref-height: 40;
+    -fx-pref-width:100;
+}
+.approvedBtn{
+    -fx-background-color:  #1d7899;
+    -fx-text-fill: white;
+    -fx-padding: 5;
+    -fx-pref-height: 40;
+    -fx-pref-width:200;
+}

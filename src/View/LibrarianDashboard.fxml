@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="913.0" prefWidth="1573.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LibrarianDashboardController">
+    <stylesheets>
+        <URL value="@/Style/librariandashboard.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane layoutX="172.0" layoutY="81.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #1d7899;" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+         <children>
+            <BorderPane layoutX="385.0" layoutY="434.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-width: 4; -fx-border-color: #1d7899;" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="900.0">
+                           <children>
+                              <ImageView fx:id="userProfileImage" fitHeight="93.0" fitWidth="86.0" onMouseClicked="#ShowUserProfileStage" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/log.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="userProfileFullName" prefWidth="200.0" text="User FullName" />
+                           </children>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </VBox>
+                        <VBox alignment="CENTER_RIGHT" prefHeight="104.0" prefWidth="1240.0">
+                           <children>
+                              <ImageView fitHeight="92.0" fitWidth="157.0" onMouseClicked="#Logout" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/logout.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </top>
+               <left>
+                  <VBox prefHeight="765.0" prefWidth="290.0" spacing="5.0" style="-fx-background-color: white; -fx-border-color: #1d7899; -fx-border-width: 4;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label fx:id="sideBarHome" alignment="CENTER" onMouseClicked="#ShowSideBarHome" prefHeight="50.0" prefWidth="269.0" style="-fx-background-color: #1d7899;" text="Home" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="sideBarBookManagment" alignment="CENTER" onMouseClicked="#ShowSideBarBookManagment" prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: #1d7899;" text="Borrow Book Managments" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="sideBarStatistics" alignment="CENTER" layoutX="19.0" layoutY="44.0" onMouseClicked="#ShowSideBarStatistics" prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: #1d7899;" text="Statistics" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="sideBarLogout" alignment="CENTER" layoutX="14.0" layoutY="233.0" onMouseClicked="#sideBarlogout" prefHeight="50.0" prefWidth="294.0" style="-fx-background-color: #7e1414;" text="Logout" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets top="25.0" />
+                     </padding>
+                  </VBox>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: white; -fx-border-width: 4;" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="AnchorPaneHome" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label alignment="CENTER" layoutX="116.0" layoutY="279.0" prefHeight="74.0" prefWidth="449.0" text="Welcom Librarian" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="51.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="AnchorPaneBookManagment" layoutX="14.0" layoutY="4.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="4.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="351.0" layoutY="50.0" prefHeight="50.0" prefWidth="448.0" text="Borrow Book Managments" textFill="#f7eeee">
+                                 <font>
+                                    <Font name="System Bold" size="34.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="statuseCB" layoutX="39.0" layoutY="152.0" onAction="#ApplyStatusFiltter" prefHeight="44.0" prefWidth="210.0" promptText="Select Statuse" />
+                              <TableView fx:id="tableBorrowBooksDetails" layoutX="39.0" layoutY="219.0" prefHeight="534.0" prefWidth="1195.0">
+                                <columns>
+                                  <TableColumn fx:id="userIdCol" prefWidth="135.0" text="User ID" />
+                                  <TableColumn fx:id="userNameCol" prefWidth="135.0" text="User Name" />
+                                    <TableColumn fx:id="userImageCol" prefWidth="135.0" text="User Image" />
+                                    <TableColumn fx:id="bookIdCol" prefWidth="135.0" text="Book ID" />
+                                    <TableColumn fx:id="bookNameCol" prefWidth="135.0" text="Book Name" />
+                                    <TableColumn fx:id="bookImageCol" prefWidth="135.0" text="Book Image" />
+                                    <TableColumn fx:id="borrowStatusCol" prefWidth="135.0" text="Borrow Status" />
+                                    <TableColumn fx:id="ActionsCol" prefWidth="247.9999877929688" text="Actions" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="StatisticAnchorePane" layoutX="6.0" layoutY="4.0" prefHeight="772.0" prefWidth="1249.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0" style="-fx-border-color: #1d7899; -fx-border-width: 6;" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="6.0">
+                                 <children>
+                                    <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="7.0">
+                                       <children>
+                                          <ImageView fitHeight="209.0" fitWidth="264.0" onMouseClicked="#showAllBooksInSystem" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/bk1.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="59.0" prefWidth="450.0" text="All Book In System" textFill="#1d7899">
+                                             <font>
+                                                <Font name="System Italic" size="27.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="totalBookCountLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #1d7899;" text="0" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </VBox>
+                                    <HBox prefHeight="287.0" prefWidth="1442.0" spacing="120.0">
+                                       <children>
+                                          <VBox alignment="CENTER" prefHeight="354.0" prefWidth="470.0" spacing="5.0" style="-fx-border-width: 6; -fx-border-color: #1d7899; -fx-border-radius: 30;">
+                                             <children>
+                                                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="46.0" prefWidth="243.0" text="All Borrowd Book " textFill="#1d7899">
+                                                   <font>
+                                                      <Font name="System Italic" size="25.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="134.0" fitWidth="160.0" onMouseClicked="#showBorrowedStatistic" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/book1.jpg" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label fx:id="borrowedBookCountLabel" alignment="CENTER" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #1d7899;" text="0" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                          </VBox>
+                                          <VBox alignment="CENTER" prefHeight="356.0" prefWidth="470.0" spacing="5.0" style="-fx-border-width: 6; -fx-border-color: #1d7899; -fx-border-radius: 30;">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="46.0" prefWidth="268.0" text="Pending Book" textFill="#1d7899">
+                                                   <font>
+                                                      <Font name="System Italic" size="25.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="134.0" fitWidth="160.0" onMouseClicked="#showPendingStatistic" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/book4.jpg" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label fx:id="pendingBookCountLabel" alignment="CENTER" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #1d7899;" text="0" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                          </VBox>
+                                          <VBox alignment="CENTER" prefHeight="273.0" prefWidth="470.0" spacing="5.0" style="-fx-border-width: 6; -fx-border-color: #1d7899; -fx-border-radius: 30;">
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="46.0" prefWidth="279.0" text="Approved Book" textFill="#1d7899">
+                                                   <font>
+                                                      <Font name="System Italic" size="25.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="134.0" fitWidth="160.0" onMouseClicked="#showApprovedStatistic" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/book2.jpg" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label fx:id="approvedBookCountLabel" alignment="CENTER" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #1d7899;" text="0" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="70.0" right="70.0" top="5.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </BorderPane.margin>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
