@@ -11,6 +11,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -183,3 +184,4 @@ public class RegisterController implements Initializable {
         ImageIO.write(bi, "jpg", file);
     }
 }
+
