@@ -5,8 +5,6 @@
  */
 package Controller;
 
-
-
 import DataBase.BookDatabaseHandler;
 import DataBase.UserDatabaseHandler;
 import Model.Book;
@@ -1049,4 +1047,5 @@ private void refreshStatisticsLabels() {
     totalUsersCountLabel.setText(UserDatabaseHandler.getUsersData().size() + "");
 }
 }
+
 
