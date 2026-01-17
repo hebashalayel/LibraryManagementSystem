@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package Controller;
-
 import DataBase.CategoryDatabaseHandler;
 import Model.Category;
 import java.io.IOException;
@@ -81,3 +80,4 @@ public class CategoryController implements Initializable {
         this.categoryComboBoxForm = categoryComboBoxForm;
     }
 }
+
