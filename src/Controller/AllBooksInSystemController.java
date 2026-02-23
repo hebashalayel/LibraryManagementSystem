@@ -16,7 +16,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import static scenebuilderfxlibrarymanagmentsystem.SceneBuilderFxLibraryManagmentSystem.Books;
-\
+
 
 /**
  * FXML Controller class
@@ -102,3 +102,4 @@ public class AllBooksInSystemController implements Initializable {
     }
 
 }
+
