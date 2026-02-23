@@ -20,7 +20,6 @@ import static scenebuilderfxlibrarymanagmentsystem.SceneBuilderFxLibraryManagmen
 import static scenebuilderfxlibrarymanagmentsystem.SceneBuilderFxLibraryManagmentSystem.Categories;
 import static scenebuilderfxlibrarymanagmentsystem.SceneBuilderFxLibraryManagmentSystem.CategoriesDB;
 import static scenebuilderfxlibrarymanagmentsystem.SceneBuilderFxLibraryManagmentSystem.CategoryStage;
-
 /**
  * FXML Controller class
  *
@@ -80,4 +79,5 @@ public class CategoryController implements Initializable {
         this.categoryComboBoxForm = categoryComboBoxForm;
     }
 }
+
 
